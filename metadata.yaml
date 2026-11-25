@@ -1,0 +1,13 @@
+name: astrbot_plugin_bilibili
+display_name: "哔哩哔哩"
+desc: "群里查 B 站视频：关键词搜索出卡片图，发 BV 号或分享链接自动解析详情，还能看全站热门榜；支持回复序号挑视频和 AI 主动搜索。只调公开 Web 接口，不登录、不下载视频。"
+short_desc: "查 B 站视频，搜关键词出图，链接/BV 号自动解析"
+version: v1.0.0
+author: WorkBuddy
+repo: ""
+astrbot_version: ">=4.5.0,<5"
+support_platforms:
+  - aiocqhttp
+  - qq_official
+  - telegram
+  - discord

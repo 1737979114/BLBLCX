@@ -1,0 +1,71 @@
+{
+  "enable": {
+    "description": "启用哔哩哔哩查询",
+    "type": "bool",
+    "default": true
+  },
+  "search_limit": {
+    "description": "搜索结果条数",
+    "type": "int",
+    "default": 8,
+    "hint": "一次搜几个视频，范围 1-10。条数越多卡片越长"
+  },
+  "send_mode": {
+    "description": "发送方式",
+    "type": "string",
+    "options": [
+      "card",
+      "text"
+    ],
+    "default": "card",
+    "hint": "card 图片卡片（推荐，封面标题一眼看清）；text 纯文字（省流量，弱网环境更稳）"
+  },
+  "search_order": {
+    "description": "搜索结果排序",
+    "type": "string",
+    "options": [
+      "totalrank",
+      "click",
+      "pubdate",
+      "dm",
+      "stow"
+    ],
+    "default": "totalrank",
+    "hint": "totalrank 综合排序；click 按播放量；pubdate 按最新发布；dm 按弹幕数；stow 按收藏数"
+  },
+  "enable_parse_link": {
+    "description": "自动解析群里的 B 站链接和 BV 号",
+    "type": "bool",
+    "default": true,
+    "hint": "开着时，有人直接发 https://b23.tv/xxx 或 BV 号，插件会自动回一张视频详情卡片；关掉则只响应 b站 指令"
+  },
+  "enable_choice": {
+    "description": "搜完可以用序号看详情",
+    "type": "bool",
+    "default": true,
+    "hint": "搜索后列出结果，用户回复数字（1、2、3…）就发那一条的详情卡片。关掉后搜索完就结束"
+  },
+  "choice_timeout": {
+    "description": "序号有效期（秒）",
+    "type": "int",
+    "default": 120,
+    "hint": "超过这个时间，回复数字不再触发详情，避免群里正常聊天被误判"
+  },
+  "enable_llm_tool": {
+    "description": "允许 AI 主动搜 B 站",
+    "type": "bool",
+    "default": true,
+    "hint": "开启后，用户和 AI 聊天说「帮我找 B 站上 XX 的视频」，AI 会自己调用搜索"
+  },
+  "rate_limit_seconds": {
+    "description": "同一用户冷却（秒）",
+    "type": "int",
+    "default": 3,
+    "hint": "防止连续刷屏，设为 0 关闭"
+  },
+  "request_timeout": {
+    "description": "请求超时（秒）",
+    "type": "int",
+    "default": 10
+  }
+}
